@@ -1,7 +1,7 @@
-import { program as caporal } from "@caporal/core";
+import { program as caporal, type Validator } from "@caporal/core";
 import type { ActionParameters } from "types";
-import { validatePath } from "./validatePath";
 import { conclude } from "./conclude";
+import { validatePath } from "./validatePath";
 
 export const program = caporal
 

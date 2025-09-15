@@ -10,6 +10,8 @@
     "typescript": "^5"
   },
   "dependencies": {
-    "@caporal/core": "^2.0.7"
+    "@caporal/core": "^2.0.7",
+    "typed-file-system-path": "^0.12.0",
+    "zod": "^4.1.8"
   }
 }
