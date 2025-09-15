@@ -8,8 +8,8 @@ export function conclude(sourceDir: FilePath, query: string) {
 }
 
 const drawConclusion = (query: string) =>
-    (conclusion: string, file: Buffer) =>
-        infer(file, query, conclusion);
+    async (conclusion: string, file: Buffer) =>
+        await infer(file, query, conclusion);
 
 const files = (sourceDir: string) => fs
     .readdirSync(sourceDir)
