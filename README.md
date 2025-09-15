@@ -1,15 +1,5 @@
 # ad-rem
 
-To install dependencies:
+This tool maps over a set of documents with a question, and reduces them to an answer.
 
-```bash
-bun install
-```
-
-To run:
-
-```bash
-bun run index.ts
-```
-
-This project was created using `bun init` in bun v1.2.21. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+This is a sort of brute-force LLM-based tool, not a sophisticated RAG/MCP system. Naive, one-shot inference has a role, however, in generating the kinds of meta-context that can improve RAG/MCP performance.
