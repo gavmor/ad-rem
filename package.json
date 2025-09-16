@@ -1,5 +1,7 @@
 {
   "name": "ad-rem",
+  "version": "v1.0.0",
+  "description": "ad rem (adverb, adjective): To the point; directly relevant or pertinent to the matter under discussion.",
   "module": "index.ts",
   "type": "module",
   "private": true,
