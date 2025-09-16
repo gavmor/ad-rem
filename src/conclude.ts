@@ -1,5 +1,5 @@
 import type { FilePath } from "./validatePath";
-import { infer } from "./infer";
+import { infer } from "./ollama";
 import { files } from "./files";
 
 export async function conclude(sourceDir: FilePath, query: string): Promise<string> {
