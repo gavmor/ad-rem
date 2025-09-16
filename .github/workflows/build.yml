@@ -18,8 +18,9 @@ jobs:
       run: bun test
     - name: Build Executable
       run: bun build index.ts --compile --outfile ./dist/ad-rem
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v2
+    - name: Create GitHub Release and Upload Artifact
+      uses: softprops/action-gh-release@v2
       with:
-        name: ad-rem
-        path: ./dist/ad-rem
+        files: ./dist/ad-rem
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
