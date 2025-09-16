@@ -1,3 +1,4 @@
+import { mkdir, mkdirSync } from "fs";
 import { files } from "../src/files.ts";
 import { describe, it, expect } from "bun:test";
 
@@ -15,6 +16,7 @@ describe("files", () => {
         expect(fileBuffers[1]).toBeInstanceOf(Buffer);
     });
     it("returns an empty array for an empty directory", () => {
+        mkdirSync("./test/fixtures/empty-dir", { recursive: true });
         const fileBuffers = files("./test/fixtures/empty-dir");
         expect(fileBuffers.length).toBe(0);
     });

@@ -29,6 +29,7 @@ jobs:
         run: bun build index.ts --compile --outfile ./dist/ad-rem
 
       - name: Create GitHub Release and Upload Artifact
+        if: startsWith(github.ref, 'refs/tags/')
         uses: softprops/action-gh-release@v2
         with:
           files: ./dist/ad-rem
