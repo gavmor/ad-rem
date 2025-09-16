@@ -1,0 +1,25 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Bun
+      run: corepack install bun
+    - name: Install Dependencies
+      run: bun install
+    - name: Run Tests
+      run: bun test
+    - name: Build Executable
+      run: bun build index.ts --compile --outfile ./dist/ad-rem
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: ad-rem
+        path: ./dist/ad-rem
